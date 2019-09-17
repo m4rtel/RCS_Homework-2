@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.myheader{
+    background-color: aqua;
+}
+.mymenu {
+    background-color: blueviolet;
+}
+.mycontent {
+    background-color: lightseagreen
+}
+.myad {
+    background-color: limegreen;
+}
+.myfooter {
+    background-color: lightsalmon;
+}
