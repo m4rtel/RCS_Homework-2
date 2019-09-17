@@ -3,19 +3,55 @@
 *::after {
     box-sizing: border-box;
 }
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+
+.mycontainer {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px 125px 45vh 50px 50px;
+    grid-template-areas: 
+    "myheader"
+    "mymenu"
+    "mycontent"
+    "myad"
+    "myfooter"
+}
 
 .myheader{
     background-color: aqua;
+    grid-area: myheader;
 }
 .mymenu {
     background-color: blueviolet;
+    grid-area: mymenu;
 }
 .mycontent {
-    background-color: lightseagreen
+    background-color: lightseagreen;
+    grid-template-areas: mycontent;
 }
 .myad {
     background-color: limegreen;
+    grid-template-areas: myad;
 }
 .myfooter {
     background-color: lightsalmon;
+    grid-template-areas: myfooter;
+}
+.ad-img {
+    width: 50px;
+    height: 50px;
+}
+/*PC version*/
+@media (min-width: 992px) {
+    .mycontainer {
+        grid-template-columns: 100px 1fr 125px;
+        grid-template-rows: 100px 70vh 50px;
+        grid-template-areas: 
+        "myheader myheader myheader"
+        "mymenu mycontent myad"
+        "myfooter myfooter myfooter"
+    }
 }
