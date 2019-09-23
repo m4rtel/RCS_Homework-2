@@ -95,6 +95,12 @@ html {
     object-fit: cover;
     width: 100%;
 }
+.ad-img-2 {
+    display: none;
+}
+.slideshow {
+    display: none;
+}
 /* BODY END */
 
 .myfooter {
@@ -108,54 +114,11 @@ html {
 
 
 
-
-
-    
-
-
-/*PC version-------------------------------------------------------------------------------------------------------------*/
-@media (min-width: 992px) {
-    .mycontainer {
-        grid-template-columns: 75px 1fr 125px;
-        grid-template-rows: 45px 1fr 50px;
-        grid-template-areas: 
-        "myheader myheader myheader"
-        "mymenu mycontent myad"
-        "myfooter myfooter myfooter"
-    }
-.header-ul > li {
-    display: inline;
-}
-nav.header-menu {
-    display: flex;
-    justify-content: center;
-}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* 576 version ----------------------------------------------------------------------------------------------------------*/
 @media (min-width: 576px) {
     .mycontainer {
         grid-template-columns: 75px 1fr 125px;
-        grid-template-rows: 50px 50px 1fr 1fr 25px;
+        grid-template-rows: 50px 50px 2fr 1fr 25px;
         height: 95vh;
         width: 97vw;
         grid-template-areas: 
@@ -206,9 +169,8 @@ nav.header-menu {
     justify-content: center;
 }
 .head-3 {
-    background-color: green
+    background-color: green;
     grid-area: head-3;
-    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -218,7 +180,6 @@ nav.header-menu {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
-    text-size: 50%;
     grid-template-areas:
     "menu-ul-2"
     "menu-ul";
@@ -236,4 +197,62 @@ nav.header-menu {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/* Menu Ends HERE */
+/* Body STARTs HERE */
+.body {
+    display: grid;
+    grid-template-columns: 1fr 10px;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 5px;
+    grid-template-areas:
+    "mycontent mycontent myad"
+    "mycontent-2 mycontent-2 mycontent-2"
+}
+.mycontent {
+    grid-area: mycontent;
+}
+.myad {
+    grid-area: myad;
+}
+.mycontent-2 {
+    grid-area: mycontent-2;
+}
+.ad-img {
+    display: none;
+}
+.ad-img-2 {
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+.slideshow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: slidebar;
+    background-color: red;
+}
+
+/* Footer STARTs HERE */
+.footer {
+    height: 10px;
+}
+/* Footer Ends HERE */
+
+
+/* 992 version ----------------------------------------------------------------------------------------------------------*/
+@media (min-width: 992px) {
+    .mycontainer {
+        grid-template-columns:1fr 100px;
+        grid-template-rows: 50px 2fr 1fr 25px;
+        height: 97vh;
+        width: 99vw;
+        grid-template-areas: 
+        "myheader myheader"
+        "mymenu mymenu"
+        "body slidebar"
+        "myfooter myfooter"
+    }
+
 }
