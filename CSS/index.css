@@ -243,13 +243,12 @@ html {
 .mycontainer {
         grid-template-columns:100px 1fr 150px;
         grid-template-rows: 75px 1fr 2fr 1fr;
-        height: 97vh;
+        height: 94vh;
         width: 99vw;
 }
 .myheader {
     grid-column: 1 / 4;
-    grid-row: 1 / 2;
-    row-gap: 5px;    
+    grid-row: 1 / 2;   
 }
 .mymenu {
     grid-column: 1 / 3;
@@ -277,11 +276,10 @@ html {
     grid-row: 4 / 5;
 }
 .myad {
-    display: none;
+    visibility: hidden;
 }
 .pc-ad {
     display: flex;
-    gap: 5px;
 }
 
 
